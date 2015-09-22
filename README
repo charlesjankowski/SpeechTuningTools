@@ -1,0 +1,25 @@
+tagcollisions.py
+
+
+Utility to find "close" utterances that have different tags. Phrases shown on output are ones with different tags, but "close"
+
+The Python xlrd module is needed to read the tag/phrases file from Excel. We could add an option to read from .csv if needed.
+
+You can write to either an Excel file (requires xlwt) or onto standard output as .csv, which can be imported into Excel.
+
+
+
+
+
+Usage example, using the CardSemanticTags.xlsx example file:
+
+Output to Excel:
+
+python tagcollisions.py -tagfile CardSemanticTags.xlsx -phrasescolumn Verbatim -tagcolumn "Semantic Tag" -outfile collisions.xlsx
+
+
+
+Output to standard out using .csv:
+
+python tagcollisions.py -tagfile CardSemanticTags.xlsx -phrasescolumn Verbatim -tagcolumn "Semantic Tag" > collisions.csv
+
